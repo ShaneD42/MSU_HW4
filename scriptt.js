@@ -1,6 +1,6 @@
 
 
-// Variable objectw for questions
+// Variable objectw for questions!
 
 var questions = [
     {
