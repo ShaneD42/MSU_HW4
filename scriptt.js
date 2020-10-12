@@ -46,10 +46,10 @@ let timer = document.getElementById("timer");
 //div for high scores
 let scoresDiv = document.getElementById("scores-div"); // scores will be stored here.. but hidden?
 
-let buttonsDiv = document.getElementById("buttons") // Div containing button for 'Start Quiz'
+let buttonsDiv = document.getElementById("buttons"); // Div containing button for 'Start Quiz'
 
 //button for high scores
-let viewScoresBtn = document.getElementById("view-scores") // 'View Score' Button
+let viewScoresBtn = document.getElementById("view-scores"); // 'View Score' Button
 
 //start button div
 let startButton = document.getElementById("start-button");
@@ -163,23 +163,23 @@ function captureUserScore() {
   results.append(postScoreBtn);
 }
 
-const saveAnswers = (arr)
+// const saveAnswers = (arr);
 
 const saveScores = (array) => {
   window.localStorage.setItem("highScores", JSON.stringify(array));
-}
+};
 
 const defineScoresArray = (arr1, arr2) => {
   if(arr1 !== null) {
-    return arr1
+    return arr1;
   } else {
-    return arr2
+    return arr2;
   }
 }
 
 const removeEls = (...els) => {
   for (let el of els) el.remove();
-}
+};
 
 function displayAllScores() {
   removeEls(timer, startButton, results);
@@ -213,8 +213,8 @@ function clearScoresBtn() {
     event.preventDefault();
     removeEls(scoresDiv);
     window.localStorage.removeItem("highScores");
-  })
-  scoresDiv.append(clearBtn)
+  });
+  scoresDiv.append(clearBtn);
 }
 
 function goBackBtn() {
@@ -224,8 +224,8 @@ function goBackBtn() {
   backBtn.addEventListener("click", function(event){
     event.preventDefault();
     window.location.reload();
-  })
-  buttonsDiv.append(backBtn)
+  });
+  buttonsDiv.append(backBtn);
 }
 
 
